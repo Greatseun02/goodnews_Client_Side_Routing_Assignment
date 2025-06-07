@@ -1,0 +1,91 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.welcome{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:floralwhite;
+}
+
+.welcome-container{
+    width: 80%;
+    background-color: white;
+    padding: 100px 100px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 16px -10px;
+    text-align: center;
+    max-width: 600px;
+}
+
+.collectName{
+    display: grid;
+    gap: 40px;
+}
+
+.collectName h3{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.collectName form{
+    display: grid;
+    gap: 12px;
+}
+
+.collectName input, .collectName button{
+    height: 44px;
+    border-radius: 6px;
+    outline: none;
+    border: 1.2px solid gray;
+    padding: 0px 10px;
+}
+
+.collectName button:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.collectName button{
+    background-color: aquamarine;
+    font-size: 18px;
+}
+
+.display-routes {
+  text-align: center;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+}
+
+.display-routes h1 {
+  font-size: 2rem;
+  color: #333;
+  text-transform: capitalize;
+  margin-bottom: 6px;
+}
+
+.route-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.route-list a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.route-list a:hover {
+  color: #0056b3;
+}
+

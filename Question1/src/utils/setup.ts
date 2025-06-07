@@ -1,0 +1,1 @@
+export const SESSION_STORAGE = "goodnews_assignment_redirect_to_contact_page_and_github_page";
