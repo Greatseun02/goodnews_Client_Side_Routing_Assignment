@@ -1,0 +1,128 @@
+.github-repo{
+    padding: 20px;
+    background-color: antiquewhite;
+    min-height: 100vh;
+}
+
+.github-repo-container{
+    width: 80%;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.github-repo-h1{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.github-repo input{
+    height: 40px;
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.github-repo .filter{
+    display: flex;
+    margin-bottom: 10px;
+    gap: 12px;
+}
+
+.github-repo .filter .select{
+    display: grid;
+    position: relative;
+    cursor: pointer;
+}
+
+.github-repo .filter .label{
+    display: flex;
+    gap: 30px;
+    background-color: #fef7ed;
+    border: 1px solid #fed7aa;
+    border-radius: 4px;
+    padding: 8px 10px;
+}
+
+.github-repo .filter .options{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fffbeb; /* amber-25 equivalent */
+    border: 1px solid #fed7aa; 
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.github-repo .filter .option:hover{
+    background-color: #fef3e2; /* amber-100 equivalent */
+    color: #92400e;
+}
+
+.github-repo .filter .option{
+    padding: 10px;
+}
+
+.github-repo .filter .label p, .github-repo .filter .option{
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;    
+    -ms-user-select: none; 
+}
+
+.github-repo .filter .rotate{
+    transform: rotate(90deg);
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.github-repo .filter .options-container{
+    position: relative;
+    height: 1px;
+}
+
+.github-repo .repos{
+    display: grid;
+    gap: 20px;
+    width: 100%;
+}
+
+.github-repo .repos .repo{
+    display: grid;
+    gap: 10px;
+    padding: 20px;
+    border: 1.4px solid gray;
+    border-radius: 4px;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.github-repo .repos .repo h3, .github-repo .repos .repo .description{
+    font-size: 18px;
+}
+
+.github-repo .repos .repo .topics{
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.github-repo .repos .repo .topics p{
+    padding: 4px;
+    border-radius: 2px;
+    background-color: #fffbeb; 
+    height: fit-content;
+    
+}
+
+.github-repo .repos .repo a{
+    text-decoration: none;
+}
+
+.github-repo .repos .repo .more{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
