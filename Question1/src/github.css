@@ -126,3 +126,29 @@
     align-items: center;
 }
 
+.paginate{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.paginate .numbers{
+    display: flex;
+    list-style-type: none;
+    gap: 12px;
+}
+
+.paginate .number{
+    cursor: pointer;
+}
+
+
+.paginate button{
+    padding: 7px 20px;
+    background-color: #92400e;
+    color:#fef3e2;
+    cursor: pointer;
+    font-size: 18px;
+}

@@ -1,4 +1,3 @@
-import React from 'react'
 import type { repo } from '../../Pages/Github'
 
 function formatDate (dateTime:string){
@@ -10,7 +9,7 @@ function formatDate (dateTime:string){
 export default function Repo({full_name, html_url, description, topics, updated_at, stargazers_count}:repo) {
   return (
     <div className='repo'>
-        <h3 className='title'><a href={html_url}>{full_name}</a></h3>
+        <h3 className='title'><a target='_blank' href={html_url}>{full_name}</a></h3>
         <p className='description'>{description}</p>
         <div className='topics'>
             {

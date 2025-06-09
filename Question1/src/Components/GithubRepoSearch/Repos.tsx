@@ -5,7 +5,7 @@ export default function Repos({repos}: {repos:repo[]}) {
   return (
     <div className='repos'>
         {
-            repos.map((repo)=> <Repo key={repo.full_name} {...repo} />)
+            repos?.map((repo)=> <Repo key={repo.full_name} {...repo} />)
         }
     </div>
   )

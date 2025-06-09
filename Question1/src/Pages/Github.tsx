@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 import Repos from "../Components/GithubRepoSearch/Repos";
 import "../github.css"
 import Filter from "../Components/GithubRepoSearch/Filter";
+import Paginate from "../Components/GithubRepoSearch/Paginate";
+import { token } from "../utils/setup";
 
 export type repo = {
   full_name: string;
@@ -16,23 +18,34 @@ export type repo = {
 export default function Github() {
   const [queryInput, setQueryInput] = useState("")
   const [numberOfItems, setNumberOfItems] = useState("10")
-  const [sortResult, setSortResult] = useState("Best match")
-  const [order, setOrder] = useState("asc")
+  const [sortResult, setSortResult] = useState("best-match")
+  const [order, setOrder] = useState("desc")
   const [repos, setRepos] = useState<repo[]>([]);
+  const [maxPages, setMaxPages] = useState(0);
+  const [position, setPosition] = useState(1);
 
 
   useEffect(()=>{
-    const url= `https://api.github.com/search/repositories?q=${queryInput ? queryInput : "A"}`
+    const url= `https://api.github.com/search/repositories?q=${queryInput ? queryInput : "A"}&order=${order}&sort=${sortResult}&per_page=${numberOfItems}&page=${position}`
 
-    const data = fetch(url).then(
+    fetch(url, {
+      headers:{
+        Authorization: `Bearer ${token}`,
+        Accept: "application/vnd.github+json"
+      }
+    }).then(
       (data)=> data.json()
     ).then(
-      (response)=> setRepos(response.items)
+      (response)=> {setRepos(response.items); getMaxPages(response.total_count)}
     )
     
+  }, [queryInput, order, sortResult, position, numberOfItems])
 
-  }, [queryInput])
-  
+  function getMaxPages(size: number){
+    let itemsInNumber = Number(numberOfItems);
+
+    setMaxPages(Math.ceil(size/itemsInNumber));
+  }
 
   return (
     <div className="github-repo">
@@ -48,6 +61,7 @@ export default function Github() {
           setOrder={setOrder}
         />
         <Repos repos={repos}/>
+        <Paginate maxPages={maxPages} position={position} setPosition={setPosition}/>
       </div>
     </div>
   )

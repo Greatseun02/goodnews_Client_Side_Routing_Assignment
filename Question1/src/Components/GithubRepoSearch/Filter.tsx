@@ -1,4 +1,3 @@
-import React from 'react'
 import type { setState } from '../../utils/types';
 import Select from './Select';
 
@@ -16,13 +15,13 @@ type filterProps = {
 }
 
 const sortOptions = [
-    {value:"Best match", label:"Best match"},
-    {value:"Stars", label:"Stars"}, 
-    {value:"Most recently updated", label:"Most recently updated"}
+    {value:"best-match", label:"Best match"},
+    {value:"stars", label:"Stars"}, 
+    {value:"updated", label:"Most recently updated"}
 ]
 
 const orders = [
-  {value:"asc", label:"Ascending"}, {value:"desc", label:"Descending"}
+  {value:"desc", label:"Descending"}, {value:"asc", label:"Ascending"}
 ]
 
 const itemsPerPage = [

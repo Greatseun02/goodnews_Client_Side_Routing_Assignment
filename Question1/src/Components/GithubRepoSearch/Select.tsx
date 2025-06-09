@@ -14,7 +14,7 @@ type selectProps = {
 
 
 
-export default function Select({ options, title, selectedValue, setSelectedValue}: selectProps) {
+export default function Select({ options, title, setSelectedValue}: selectProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLabel, setSelectedLabel] = useState(options[0].label);
   const selectRef = useRef<HTMLDivElement | null>(null);
