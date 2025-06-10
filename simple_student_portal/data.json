@@ -1,0 +1,91 @@
+{
+  "courses": [
+    {
+      "id": 101,
+      "name": "Mathematics",
+      "description": ["Study of numbers, equations, and functions."]
+    },
+    {
+      "id": 102,
+      "name": "Physics",
+      "description": ["Study of matter, energy, and the fundamental forces."]
+    },
+    {
+      "id": 103,
+      "name": "Chemistry",
+      "description": ["Study of substances, their properties, and reactions."]
+    },
+    {
+      "id": 104,
+      "name": "Biology",
+      "description": ["Study of living organisms and life processes."]
+    },
+    {
+      "id": 105,
+      "name": "History",
+      "description": ["Study of past events and civilizations."]
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "studentClass": "Grade B",
+      "enrolledCourseIds": [101, 103]
+    },
+    {
+      "id": 2,
+      "name": "Bob Smith",
+      "studentClass": "Grade A",
+      "enrolledCourseIds": [102, 105]
+    },
+    {
+      "id": 3,
+      "name": "Carol Lee",
+      "studentClass": "Grade A",
+      "enrolledCourseIds": [101, 104]
+    },
+    {
+      "id": 4,
+      "name": "David Kim",
+      "studentClass": "Grade A",
+      "enrolledCourseIds": [103]
+    },
+    {
+      "id": 5,
+      "name": "Eva Brown",
+      "studentClass": "Grade B",
+      "enrolledCourseIds": [101, 102, 104]
+    },
+    {
+      "id": 6,
+      "name": "Frank White",
+      "studentClass": "Grade C",
+      "enrolledCourseIds": [105]
+    },
+    {
+      "id": 7,
+      "name": "Grace Adams",
+      "studentClass": "Grade A",
+      "enrolledCourseIds": [102, 103]
+    },
+    {
+      "id": 8,
+      "name": "Henry Moore",
+      "studentClass": "Grade C",
+      "enrolledCourseIds": [101]
+    },
+    {
+      "id": 9,
+      "name": "Isabel Clark",
+      "studentClass": "Grade C",
+      "enrolledCourseIds": [104, 105]
+    },
+    {
+      "id": 10,
+      "name": "Jack Turner",
+      "studentClass": "Grade B",
+      "enrolledCourseIds": [101, 102, 103, 104]
+    }
+  ]
+}
