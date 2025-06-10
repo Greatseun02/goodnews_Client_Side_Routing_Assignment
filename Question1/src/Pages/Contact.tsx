@@ -35,13 +35,13 @@ export default function Contact() {
                 <div className="input-output-inner">
                     <label htmlFor="name" className="input">
                         <span>Name:</span>
-                        <input id="name" value={name} onChange={(e)=>setName(e.target.value)}/>
+                        <input required id="name" value={name} onChange={(e)=>setName(e.target.value)}/>
                     </label>
                 </div>
                 <div className="input-output-inner">
                     <label htmlFor="city" className="input">
                         <span >City:</span>
-                        <input id="city" value={city} onChange={(e)=>setCity(e.target.value)}/>
+                        <input required id="city" value={city} onChange={(e)=>setCity(e.target.value)}/>
                     </label>
                 </div>
                 <div className="input-output-inner">

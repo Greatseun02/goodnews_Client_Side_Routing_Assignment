@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom"
 import { getCourse } from "../helper";
 import type { Course } from "../utils";
+import { IoBackspace } from "react-icons/io5";
 
 
 export default function StudentCourse() {
@@ -28,7 +29,7 @@ export default function StudentCourse() {
           course?.description.map(desc=> <p>{desc}</p>)
         }
         <button onClick={handleClick}>
-          Back
+          <IoBackspace/> Back
         </button>
     </div>
   )

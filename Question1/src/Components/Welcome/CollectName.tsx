@@ -9,6 +9,7 @@ export default function CollectName({name, setName, setSteps}:collectNameProps) 
             <h3>Enter your Name</h3>
             <form onSubmit={(e)=>collectUserName(e, name, setSteps)}>
                 <input 
+                    required
                     name={name}
                     onChange={(e)=>setName(e.target.value)}
                     placeholder="Enter your name"

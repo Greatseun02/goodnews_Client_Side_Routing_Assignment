@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom"
+import { useNavigate, useSearchParams } from "react-router-dom"
 import { getAllStudentsByQuery } from "../helper";
 import type { Student } from "../utils";
 import StudentCard from "../Components/StudentCard";
+import { IoBackspace } from "react-icons/io5";
 
 
 export default function Search() {
@@ -17,9 +18,21 @@ export default function Search() {
     getAllStudentsByQuery(query).then(setStudents);
   },[])
 
+  const navigate = useNavigate();
+
+  function handleClick(){
+    navigate(`/`)
+  }
+
   return (
-    <div>
-      {students.map(student=> <StudentCard key={student.id} {...student}/>)}
-    </div>
+    <>
+      <h2 className="header-cards">Search Results</h2>
+      <div className="card-container">
+        {students.map(student=> <StudentCard key={student.id} {...student}/>)}
+      </div>
+      <button className="nav-button" onClick={handleClick}>
+        <IoBackspace/> Back
+      </button>
+    </>
   )
 }

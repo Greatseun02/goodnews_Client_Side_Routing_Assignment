@@ -24,10 +24,11 @@ export default function Home() {
             onChange={(e)=> setQuery(e.target.value)}
           />
           <Link to={
+            query && query.trim() !== "" ?
             {
               pathname: "/search",
               search: `?q=${query}`
-            }
+            } : "/"
         }
 
           ><IoSearch /> Search</Link>

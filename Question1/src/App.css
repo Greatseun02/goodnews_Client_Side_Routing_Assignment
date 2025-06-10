@@ -24,6 +24,10 @@
     max-width: 900px;
 }
 
+.collectName button:focus{
+  border: 2px solid black;
+}
+
 .collectName{
     display: grid;
     gap: 40px;

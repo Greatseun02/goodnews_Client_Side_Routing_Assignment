@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 
 export default function HomeLayout() {
@@ -6,7 +6,9 @@ export default function HomeLayout() {
     <div id="home-layout">
       <div className="home-layout-container">
         <header className="header">
-          <h5 className="header-h1"><FaHome/> Home</h5>
+          <Link to="/" className="header-link">
+            <h5 className="header-h1"><FaHome/> Home</h5>
+          </Link>
         </header>
         <div className="home-outlet">
           <Outlet/>

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 import { getStudentAndCourses } from "../helper";
 import type { studentAndCourses } from "../utils";
+import { IoBackspace } from "react-icons/io5";
 
 export default function Student() {
   const { studentId } = useParams();
@@ -15,6 +16,11 @@ export default function Student() {
       }
     }, []
   )
+  const navigate = useNavigate();
+
+  function handleClick(){
+    navigate(`/students`)
+  }
 
   return (
     <>
@@ -27,6 +33,9 @@ export default function Student() {
           </div>)
         }
       </div>
+       <button className="nav-button" onClick={handleClick}>
+          <IoBackspace/> Back
+        </button>
     </>
   )
 }
